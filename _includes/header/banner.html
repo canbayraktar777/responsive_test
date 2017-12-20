@@ -1,0 +1,7 @@
+{% if page.banner or site.data.header.banner or site.banner %}
+<div id="banner">
+  <div class="banner-image-container">
+    <img src="{% if page.banner %}{{ page.banner | absolute_url }}{% else if site.data.header.banner %}{{ site.data.header.banner | absolute_url }}{% else %}{{ site.banner | absolute_url }}{% endif %}" />
+  </div>
+</div>
+{% endif %}

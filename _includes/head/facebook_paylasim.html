@@ -1,0 +1,15 @@
+{% for prop in site.data.head.fb %}
+  {% if prop[1][0] == null %}
+  <meta property="fb:{{prop[0]}}" content="{{ prop[1] }}">
+  {% else %}
+    {% for p in prop[1] %}
+      <meta property="fb:{{prop[0]}}" content="{{ p }}">
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+
+<meta property="og:url"           content="{{ page.url }}" />
+<meta property="og:type"          content="website" />
+<meta property="og:title"         content="{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}" />
+<meta property="og:description"   content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}" />
+<meta property="og:image"         content="{% if page.image %}{{ page.image | escape }}{% else %}{{ site.logo | escape }}{% endif %}" />

@@ -1,0 +1,23 @@
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+    <link rel="shortcut icon" type="image/x-icon" href="{% if site.data.head.favicon %}{{site.data.head.favicon | absolute_url}}{% endif %}">
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
+
+    <!-- Sayfa başlığı ve diğer seo meta tagleri-->
+    {% include head/seo.html %}
+
+    <!-- Gerekli css dosyaları -->
+    {% include head/css.html %}
+
+    <!-- Facebook Paylaşımları ile ilgili kısımlar -->
+    {% include head/facebook_paylasim.html %}
+
+    <!-- Google analytics and tawk.to js dosyaları -->
+    {% if jekyll.environment == 'production' %}
+
+      {% include head/google-analytics.html %}
+      {% include head/tawkto.html %}
+
+    {% endif %}
+</head>

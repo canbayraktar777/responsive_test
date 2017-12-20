@@ -1,0 +1,20 @@
+$theme-icon-png : url("http://www.rakipbul.com/images/icons.png");
+
+@mixin themeIcons ($x, $y, $width, $height){
+  background-image : $theme-icon-png;
+  background-position : #{-$x} #{-$y};
+  background-size: $width $height;
+  background-repeat: no-repeat;
+}
+
+@mixin icons ($icon) {
+  @if $icon == brand-logo {
+    @include themeIcons(0,0, 2000px, 2000px);
+    width: 115px;
+    height: 130px;
+    bottom: 0;
+  } @else if $icon == brand-logo-white {
+    @include themeIcons(230px, 18px, 700px, 700px);
+    width: 60px;
+  }
+}

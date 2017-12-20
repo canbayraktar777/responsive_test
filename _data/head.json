@@ -1,0 +1,14 @@
+{
+  "favicon" : "assets/images/Rakipbul_Favicon.ico",
+  "css" : [
+    "https://fonts.googleapis.com/icon?family=Material+Icons",
+    "./assets/main.css"
+  ],
+  "fb" : {
+    "app_id" : 171382563389057,
+    "admins" : [
+      1851730915,
+      100001797646659
+    ]
+  }
+}

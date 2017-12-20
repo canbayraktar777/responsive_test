@@ -1,0 +1,145 @@
+$banner-margin : 0;
+$banner-padding : 5px 0 0;
+
+@mixin header-padding(){
+  padding-top: $navbar-height + 70px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+
+  #banner {
+    position: relative;
+    margin : $banner-margin;
+    padding: $banner-padding;
+    text-align: right;
+
+    .banner-image-container {
+      display: block;
+
+      @media #{$large-and-up} {
+        padding: 0 20px;
+        margin-left: 200px;
+      }
+      text-align: center;
+      img {
+        max-height: 90px;
+        max-width: 100%;
+      }
+    }
+  }
+
+  #menu {
+    .brand-logo {
+      @media #{$large-and-up}{
+        left: 25px;
+      }
+      top: 0;
+      bottom: 0;
+      img {
+        position: absolute;
+        height: 170px;
+        @media #{$medium-and-down} {
+          height: 100%;
+        }
+        bottom: 0;
+      }
+      &.brand-logo-white {
+        img {
+          position: relative;
+        }
+      }
+    }
+
+    input[type="search"] {
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -150%;
+      background-color: white;
+      z-index: 2;
+      padding: 10px 20px;
+
+      & + .material-icons {
+        display: block;
+        position: absolute;
+        z-index: 3;
+        right: 150%;
+        top: 0;
+        color: $primary-color;
+        transition : right .3s;
+        cursor: pointer;
+      }
+      &:focus {
+        left: 0;
+        & + .material-icons {
+          right: 20px;
+        }
+      }
+    }
+    .search-result {
+      position: relative;
+      display: none;
+    }
+    #nav-mobile {
+      li {
+        a {
+          padding: 0;
+          margin: 0;
+          max-height: $navbar-height;
+          @media #{$small-and-down}{
+            max-height: $navbar-height-mobile;
+          }
+        }
+        label, .label {
+          padding: 0 20px 0 10px;
+          color: white;
+          font-size: 1rem;
+          cursor: pointer;
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+
+          .material-icons {
+            float: left;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    .menu-button-label {
+      @media #{$medium-and-down} {
+        display: none;
+      }
+    }
+  }
+}
+.modal.bottom-sheet {
+  max-height: 60%;
+}
+#modalNotifications {
+  counter-reset: notification_count;
+  display: block;
+}
+.notification {
+  counter-increment: notification_count;
+}
+.notification-count {
+  &:after {
+    content: counter(notification_count);
+    padding: 4px;
+    position: absolute;
+    top: 8px;
+    background-color: $secondary-color;
+    height: 20px;
+    line-height: 12px;
+    font-size: 12px;
+    left: 24px;
+    border-radius: 50%;
+  }
+}

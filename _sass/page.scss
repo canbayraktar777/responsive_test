@@ -1,0 +1,4 @@
+#page {
+  @include header-padding();
+  @include sidenav-padding();
+}

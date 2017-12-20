@@ -1,0 +1,26 @@
+title: Rakipbul
+language: tr
+author: Can Bayraktar
+email: canbayraktar@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Rakipbul Static Site
+
+twitter_username: canbayraktartwit
+github_username:  canbayraktar777
+
+sass:
+    style: compressed
+
+defaults:
+  - scope:
+      path: "assets/images"
+    values:
+      image: true
+  - scope:
+      type: lig
+    values:
+      layout: lig
+
+collections :
+  lig :
+    output : true

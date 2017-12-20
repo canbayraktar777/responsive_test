@@ -1,0 +1,31 @@
+$sidenav-width : 250px;
+
+@mixin sidenav-padding(){
+  padding-left : $sidenav-width;
+  @media #{$medium-and-down}{
+    padding-left: 0;
+  }
+}
+
+.side-nav.fixed {
+  width: $sidenav-width;
+  top: 140px;
+  bottom: 0;
+  height: auto;
+  color: white;
+}
+#slide-out {
+  .collapsible-header {
+    position: relative;
+    .side-nav-img {
+      vertical-align: middle;
+    }
+    i.material-icons.right.top {
+      position: absolute;
+      top: 0;
+      right: 0;
+      margin: 0;
+    }
+  }
+
+}
