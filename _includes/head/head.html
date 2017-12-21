@@ -2,7 +2,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <link rel="shortcut icon" type="image/x-icon" href="{% if site.data.head.favicon %}{{site.data.head.favicon | absolute_url}}{% endif %}">
-    <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}" />
+    <link rel="canonical" href="{{ page.url | replace:'index.html','' | relative }}" />
 
     <!-- Sayfa başlığı ve diğer seo meta tagleri-->
     {% include head/seo.html %}
