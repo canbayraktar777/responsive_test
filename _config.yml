@@ -24,3 +24,7 @@ defaults:
 collections :
   lig :
     output : true
+  takim :
+    output : true
+  oyuncu :
+    output : true
