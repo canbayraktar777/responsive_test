@@ -1,9 +1,9 @@
 {% if page.logo or site.data.header.logo or site.logo %}
-<a href="{{ relative_url }}" class="brand-logo left hide-on-med-and-down">
+<a href="{{ "/" | relative_url }}" class="brand-logo left hide-on-med-and-down">
   <img id="logo" src="{% if page.logo %}{{page.logo | absolute_url}}{% else if site.data.header.logo %}{{site.data.header.logo | absolute_url}}{% else %}{{site.logo | absolute_url}}{%endif%}" />
 </a>
 {% endif %}
 {{ if page.logo_white or site.data.header.logo_white or site.logo_white }}
-<a href="{{ relative_url }}" class="brand-logo brand-logo-white hide-on-large-only">
+<a href="{{ "/" | relative_url }}" class="brand-logo brand-logo-white hide-on-large-only">
   <img src="{% if page.logo_white %}{{page.logo_white | absolute_url}}{% else if site.data.header.logo_white %}{{site.data.header.logo_white | absolute_url}}{% else %}{{site.logo_white | absolute_url}}{%endif%}" />
 </a>
