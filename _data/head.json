@@ -1,7 +1,6 @@
 {
   "favicon" : "assets/images/Rakipbul_Favicon.ico",
   "css" : [
-    "https://fonts.googleapis.com/icon?family=Material+Icons",
     "./assets/main.css"
   ],
   "fb" : {
