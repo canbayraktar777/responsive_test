@@ -24,5 +24,3 @@ defaults:
 collections :
   lig :
     output : true
-
-theme: jekyll-theme-cayman
