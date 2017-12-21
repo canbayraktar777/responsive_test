@@ -1,7 +1,7 @@
 [{
   "url" : "#!#",
   "img" : {
-    "url" : "/images/yuna.jpg",
+    "url" : "./assets/images/logo40x40.png",
     "alt" : "yuna",
     "class" : "circle"
   },
